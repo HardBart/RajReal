@@ -1,0 +1,2 @@
+# Normalizuj końce linii do LF (deploy na Linux VPS)
+* text=auto eol=lf
