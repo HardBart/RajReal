@@ -113,8 +113,8 @@ export function ContactForm() {
         trafniejszą propozycję przygotujemy. Wymagane są jedynie pola oznaczone
         gwiazdką{" "}
         <span className="font-medium text-destructive">*</span> — województwo,
-        telefon lub e-mail oraz zgoda na kontakt. Resztę możesz spokojnie
-        pominąć.
+        miejscowość, telefon lub e-mail oraz zgoda na kontakt. Resztę możesz
+        spokojnie pominąć.
       </div>
 
       <FormSection title="Co sprzedajesz">
@@ -201,8 +201,13 @@ export function ContactForm() {
             </FormFieldWrapper>
           )}
         />
-        <FormFieldWrapper label="Miejscowość" htmlFor="city">
-          <Input id="city" {...register("city")} />
+        <FormFieldWrapper
+          label="Miejscowość"
+          htmlFor="city"
+          optional={false}
+          error={errors.city?.message}
+        >
+          <Input id="city" aria-invalid={!!errors.city} {...register("city")} />
         </FormFieldWrapper>
         <FormFieldWrapper label="Ulica" htmlFor="street">
           <Input id="street" {...register("street")} />

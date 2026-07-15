@@ -15,7 +15,7 @@ export const contactFormSchema = z
     voivodeship: z.enum(["warminsko-mazurskie", "podlaskie", "inne"], {
       error: "Wybierz województwo.",
     }),
-    city: optionalText,
+    city: z.string().trim().min(1, "Podaj miejscowość.").max(500),
     street: optionalText,
 
     // Nieruchomość
