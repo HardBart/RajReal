@@ -21,12 +21,10 @@ export function FormFieldWrapper({
     <div className={cn("space-y-1.5", className)}>
       <Label htmlFor={htmlFor} className="text-sm font-medium text-foreground/85">
         {label}
-        {optional ? (
-          <span className="ml-1.5 text-xs font-normal text-muted-foreground">
-            (opcjonalne)
+        {!optional && (
+          <span className="ml-1 text-destructive" aria-hidden="true">
+            *
           </span>
-        ) : (
-          <span className="ml-1 text-destructive">*</span>
         )}
       </Label>
       {children}

@@ -108,6 +108,15 @@ export function ContactForm() {
         />
       </div>
 
+      <div className="rounded-2xl border border-border bg-secondary/40 p-5 text-sm leading-relaxed text-muted-foreground">
+        Wypełnij tylko tyle, ile chcesz — im więcej szczegółów podasz, tym
+        trafniejszą propozycję przygotujemy. Wymagane są jedynie pola oznaczone
+        gwiazdką{" "}
+        <span className="font-medium text-destructive">*</span> — województwo,
+        telefon lub e-mail oraz zgoda na kontakt. Resztę możesz spokojnie
+        pominąć.
+      </div>
+
       <FormSection title="Co sprzedajesz">
         <Controller
           control={control}
@@ -375,7 +384,7 @@ export function ContactForm() {
           />
           <label htmlFor="marketingConsent" className="text-sm leading-relaxed text-muted-foreground">
             Wyrażam zgodę na otrzymywanie informacji marketingowych drogą
-            elektroniczną (opcjonalnie).
+            elektroniczną.
           </label>
         </div>
       </div>
