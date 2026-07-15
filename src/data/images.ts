@@ -11,8 +11,8 @@ export type StockPhoto = {
 
 export const STOCK_PHOTOS = {
   heroRegionAerial: {
-    src: "https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1800&q=80",
-    alt: "Jeziora i lasy Warmii i Mazur z lotu ptaka",
+    src: "https://images.unsplash.com/photo-1439066615861-d1af74d74000?auto=format&fit=crop&w=1800&q=80",
+    alt: "Drewniany pomost nad spokojnym jeziorem Warmii i Mazur, w tle las",
   },
   modernApartmentInterior: {
     src: "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=1600&q=80",
