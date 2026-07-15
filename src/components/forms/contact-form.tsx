@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { useForm, Controller } from "react-hook-form";
+import { useForm, Controller, type Resolver } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Loader2, CheckCircle2, AlertCircle } from "lucide-react";
 
@@ -28,6 +28,35 @@ const defaultValues: Partial<ContactFormValues> = {
   rodoConsent: undefined,
   marketingConsent: false,
   website: "",
+};
+
+/**
+ * Resolver Zod + dołożenie błędu „telefon lub e-mail" na OBU polach naraz.
+ * Bez tego reguła .refine ze schematu odpala się dopiero, gdy pozostałe pola są
+ * już poprawne (Zod nie uruchamia refine przy błędach pól) — przez co brak
+ * kontaktu nie podświetlał się od razu. Wymóg „przynajmniej jedno" bez zmian.
+ */
+const zodContactResolver = zodResolver(contactFormSchema);
+
+const contactResolver: Resolver<ContactFormValues> = async (values, context, options) => {
+  const result = await zodContactResolver(values, context, options);
+  const hasContact =
+    Boolean(String(values.phone ?? "").trim()) ||
+    Boolean(String(values.email ?? "").trim());
+
+  if (!hasContact) {
+    const contactError = {
+      type: "manual" as const,
+      message: "Podaj telefon lub adres e-mail.",
+    };
+    result.errors = {
+      ...result.errors,
+      phone: result.errors.phone ?? contactError,
+      email: result.errors.email ?? contactError,
+    };
+  }
+
+  return result;
 };
 
 function FormSection({
@@ -57,7 +86,7 @@ export function ContactForm() {
     watch,
     formState: { errors, isSubmitting },
   } = useForm<ContactFormValues>({
-    resolver: zodResolver(contactFormSchema),
+    resolver: contactResolver,
     defaultValues,
   });
 
