@@ -35,7 +35,7 @@ export function Process() {
         <SectionHeading
           eyebrow="Jak wygląda proces"
           title="Cztery jasne kroki, od pierwszego kontaktu do finalizacji"
-          description="Każdy etap wyjaśniamy zanim do niego dojdzie. Możesz zrezygnować na dowolnym etapie przed podpisaniem umowy."
+          description="Każdy etap wyjaśniamy, zanim do niego dojdzie. Możesz zrezygnować na dowolnym etapie przed podpisaniem umowy."
         />
 
         <div className="mt-16 grid gap-x-8 gap-y-12 lg:grid-cols-4">
