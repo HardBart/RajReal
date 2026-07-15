@@ -2,33 +2,35 @@
  * Grafiki nagłówkowe wpisów bloga (Unsplash). Frontmatter wpisu podaje klucz
  * w polu `cover`. Podmiana grafiki = zmiana `src` tutaj (jedno miejsce).
  * Aby dodać nowy wpis z własną grafiką, dopisz tu kolejny klucz.
+ *
+ * Wszystkie kadry sprawdzone pod kątem czytelnego obcojęzycznego tekstu.
  */
 import type { StockPhoto } from "@/data/images";
 
 export const BLOG_COVERS = {
   sharesGuide: {
-    src: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1600&q=80",
-    alt: "Dokumenty i kalkulator na biurku podczas analizy sprawy",
+    src: "https://images.unsplash.com/photo-1573497491208-6b1acb260507?auto=format&fit=crop&w=1600&q=80",
+    alt: "Spokojna rozmowa przy stole",
   },
   coownership: {
     src: "https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1600&q=80",
-    alt: "Rozmowa dwóch osób nad dokumentami przy stole",
+    alt: "Uścisk dłoni po dobiciu targu w biurze",
   },
   inheritance: {
-    src: "https://images.unsplash.com/photo-1436450412740-6b988f486c6b?auto=format&fit=crop&w=1600&q=80",
-    alt: "Stary dom rodzinny wśród zieleni",
+    src: "https://images.unsplash.com/photo-1449844908441-8829872d2607?auto=format&fit=crop&w=1600&q=80",
+    alt: "Dom rodzinny wśród drzew o poranku",
   },
   debt: {
     src: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1600&q=80",
-    alt: "Dokumenty finansowe i notatnik na biurku",
+    alt: "Dłoń podpisująca dokumenty na biurku",
   },
   legal: {
     src: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1600&q=80",
-    alt: "Otwarta księga i okulary na biurku",
+    alt: "Figurka Temidy z wagą — symbol prawa",
   },
   market: {
     src: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1600&q=80",
-    alt: "Widok na budynki mieszkalne i klucze",
+    alt: "Makieta domu i klucze na stole",
   },
 } satisfies Record<string, StockPhoto>;
 

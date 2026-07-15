@@ -47,7 +47,7 @@ export default async function BlogCategoryPage({ params }: Params) {
         <div className="container-page">
           <SectionHeading
             eyebrow="Blog"
-            title={cat.label}
+            title={`${cat.label}.`}
             description={cat.description}
             align="center"
             className="mx-auto"

@@ -40,7 +40,7 @@ export default function BlogIndexPage() {
         <div className="container-page">
           <SectionHeading
             eyebrow="Blog"
-            title="Wiedza o udziałach, współwłasności i trudnych nieruchomościach"
+            title="Wiedza o udziałach, współwłasności i trudnych nieruchomościach."
             description="Zbieramy praktyczne, przystępne informacje dla współwłaścicieli, spadkobierców i osób w trudnej sytuacji prawnej lub finansowej. Bez żargonu i bez presji."
             align="center"
             className="mx-auto"

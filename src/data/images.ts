@@ -24,23 +24,19 @@ export const STOCK_PHOTOS = {
   },
   documentsOnDesk: {
     src: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1600&q=80",
-    alt: "Dokumenty i notatnik na biurku",
+    alt: "Dłoń podpisująca dokument na biurku",
   },
   keysHandover: {
     src: "https://images.unsplash.com/photo-1558036117-15d82a90b9b1?auto=format&fit=crop&w=1600&q=80",
-    alt: "Klucze do nieruchomości leżące na stole",
-  },
-  regionMap: {
-    src: "https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=1600&q=80",
-    alt: "Mapa regionu rozłożona na stole",
+    alt: "Dom jednorodzinny o zachodzie słońca",
   },
   quietConversationAtTable: {
     src: "https://images.unsplash.com/photo-1573497491208-6b1acb260507?auto=format&fit=crop&w=1600&q=80",
-    alt: "Spokojna rozmowa przy stole nad dokumentami",
+    alt: "Dwie osoby podczas spokojnej rozmowy przy stole",
   },
   buildingFacade: {
     src: "https://images.unsplash.com/photo-1449844908441-8829872d2607?auto=format&fit=crop&w=1600&q=80",
-    alt: "Nowoczesna fasada budynku mieszkalnego",
+    alt: "Drewniany dom wśród drzew o poranku",
   },
   olsztynCity: {
     // Rynek Starego Miasta w Olsztynie (Unsplash: xA_rhdMHP30)

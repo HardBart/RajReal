@@ -79,7 +79,7 @@ export const LANDINGS: Record<string, LandingData> = {
     hero: {
       eyebrow: "Skup udziałów · Warmia, Mazury, Podlasie",
       title:
-        "Sprzedaj swój udział w nieruchomości bez zgody pozostałych współwłaścicieli",
+        "Sprzedaj swój udział w nieruchomości bez zgody pozostałych współwłaścicieli.",
       description:
         "Wykupujemy udziały w mieszkaniach, domach i gruntach niezależnie od tego, czy pozostali współwłaściciele są gotowi do współpracy. Jasne warunki, bez presji czasowej.",
       image: "buildingFacade",
@@ -88,7 +88,7 @@ export const LANDINGS: Record<string, LandingData> = {
     blocks: [
       {
         eyebrow: "Dlaczego wykup udziału",
-        title: "Współwłasność bywa źródłem wieloletnich sporów",
+        title: "Współwłasność bywa źródłem wieloletnich sporów.",
         description:
           "Jako współwłaściciel masz pełne prawo rozporządzać swoim udziałem samodzielnie — zgoda pozostałych współwłaścicieli nie jest do tego potrzebna. Analizujemy stan prawny nieruchomości i przedstawiamy warunki wykupu dopasowane do Twojej sytuacji.",
         points: [
@@ -101,7 +101,7 @@ export const LANDINGS: Record<string, LandingData> = {
       },
       {
         eyebrow: "Jak to działa",
-        title: "Bezpieczny proces, krok po kroku",
+        title: "Bezpieczny proces, krok po kroku.",
         description:
           "Po otrzymaniu zgłoszenia analizujemy stan prawny udziału — w tym sytuacje spadkowe i sporne — i przedstawiamy pisemną propozycję warunków. Transakcję finalizujemy u notariusza, zgodnie z obowiązującymi przepisami.",
         points: [
@@ -115,30 +115,30 @@ export const LANDINGS: Record<string, LandingData> = {
     ],
     iconGrid: {
       eyebrow: "Kiedy pomagamy",
-      title: "Typowe sytuacje naszych klientów",
+      title: "Typowe sytuacje naszych klientów.",
       items: [
         {
           icon: Users,
-          title: "Współwłaściciele nie mogą dojść do porozumienia",
+          title: "Współwłaściciele nie mogą dojść do porozumienia.",
           description:
             "Gdy rozmowy o sprzedaży całości utknęły w martwym punkcie, wykup Twojego udziału pozwala zakończyć temat bez czekania na zgodę innych.",
         },
         {
           icon: FileWarning,
-          title: "Odziedziczyłeś udział w nieruchomości",
+          title: "Odziedziczyłeś udział w nieruchomości.",
           description:
             "Spadek dzielony między kilku spadkobierców często oznacza udziały, którymi trudno samodzielnie zarządzać na odległość.",
         },
         {
           icon: Scale3D,
-          title: "Chcesz zakończyć współwłasność bez sądu",
+          title: "Chcesz zakończyć współwłasność bez sądu.",
           description:
             "Sądowe zniesienie współwłasności bywa długie i kosztowne. Wykup udziału to zwykle szybsza droga do zamknięcia sprawy.",
         },
       ],
     },
     cta: {
-      title: "Porozmawiajmy o Twoim udziale w nieruchomości",
+      title: "Porozmawiajmy o Twoim udziale w nieruchomości.",
       description:
         "Pierwsza rozmowa i analiza sytuacji są bezpłatne i niezobowiązujące.",
     },
@@ -152,7 +152,7 @@ export const LANDINGS: Record<string, LandingData> = {
     breadcrumbLabel: "Skup mieszkań",
     hero: {
       eyebrow: "Skup mieszkań · Warmia, Mazury, Podlasie",
-      title: "Sprzedaj mieszkanie spokojnie, we własnym tempie",
+      title: "Sprzedaj mieszkanie spokojnie, we własnym tempie.",
       description:
         "Kupujemy mieszkania w blokach, kamienicach i nowym budownictwie — niezależnie od stanu technicznego czy sytuacji prawnej. Bez oglądania tłumu potencjalnych kupców i bez miesięcy oczekiwania.",
       image: "modernApartmentInterior",
@@ -161,7 +161,7 @@ export const LANDINGS: Record<string, LandingData> = {
     blocks: [
       {
         eyebrow: "Dla kogo",
-        title: "Kiedy sprzedaż mieszkania na wolnym rynku bywa trudna",
+        title: "Kiedy sprzedaż mieszkania na wolnym rynku bywa trudna.",
         description:
           "Nie każde mieszkanie łatwo sprzedać przez ogłoszenie. Zajmujemy się sytuacjami, w których standardowa sprzedaż się przeciąga lub jest utrudniona.",
         points: [
@@ -174,7 +174,7 @@ export const LANDINGS: Record<string, LandingData> = {
       },
       {
         eyebrow: "Jak to działa",
-        title: "Przejrzysty proces od zgłoszenia do aktu notarialnego",
+        title: "Przejrzysty proces od zgłoszenia do aktu notarialnego.",
         description:
           "Analizujemy sytuację mieszkania i przedstawiamy pisemną propozycję. Nie wymagamy dokumentów na etapie pierwszego kontaktu — wymienimy je bezpiecznie później.",
         points: [
@@ -188,23 +188,23 @@ export const LANDINGS: Record<string, LandingData> = {
     ],
     iconGrid: {
       eyebrow: "Co kupujemy",
-      title: "Mieszkania w różnych sytuacjach",
+      title: "Mieszkania w różnych sytuacjach.",
       items: [
         {
           icon: Home,
-          title: "Mieszkania do remontu",
+          title: "Mieszkania do remontu.",
           description:
             "Stan techniczny nie jest przeszkodą — kupujemy również lokale wymagające gruntownego remontu.",
         },
         {
           icon: ScrollText,
-          title: "Mieszkania z sytuacją prawną",
+          title: "Mieszkania z sytuacją prawną.",
           description:
             "Sprawy spadkowe, współwłasność czy inne kwestie formalne nie wykluczają transakcji.",
         },
         {
           icon: Globe2,
-          title: "Sprzedaż na odległość",
+          title: "Sprzedaż na odległość.",
           description:
             "Obsługujemy właścicieli mieszkających w innym mieście lub za granicą.",
         },
@@ -225,7 +225,7 @@ export const LANDINGS: Record<string, LandingData> = {
     breadcrumbLabel: "Skup domów",
     hero: {
       eyebrow: "Skup domów · Warmia, Mazury, Podlasie",
-      title: "Sprzedaj dom bez remontów i bez pośpiechu",
+      title: "Sprzedaj dom bez remontów i bez pośpiechu.",
       description:
         "Kupujemy domy jednorodzinne niezależnie od stanu technicznego i wieku budynku. Nie musisz nic naprawiać ani przygotowywać nieruchomości do sprzedaży.",
       image: "singleFamilyHouse",
@@ -234,7 +234,7 @@ export const LANDINGS: Record<string, LandingData> = {
     blocks: [
       {
         eyebrow: "Dla kogo",
-        title: "Dom, którego sprzedaż się przeciąga",
+        title: "Dom, którego sprzedaż się przeciąga.",
         description:
           "Domy bywają trudniejsze do sprzedania niż mieszkania — ze względu na stan, lokalizację lub sytuację prawną. Zajmujemy się właśnie takimi przypadkami.",
         points: [
@@ -247,7 +247,7 @@ export const LANDINGS: Record<string, LandingData> = {
       },
       {
         eyebrow: "Jak to działa",
-        title: "Spokojny proces oparty na jasnych zasadach",
+        title: "Spokojny proces oparty na jasnych zasadach.",
         description:
           "Analizujemy sytuację domu i przedstawiamy pisemną propozycję warunków. Cały proces prowadzimy transparentnie, z finalizacją u notariusza.",
         points: [
@@ -261,23 +261,23 @@ export const LANDINGS: Record<string, LandingData> = {
     ],
     iconGrid: {
       eyebrow: "Co kupujemy",
-      title: "Domy w różnym stanie i sytuacji",
+      title: "Domy w różnym stanie i sytuacji.",
       items: [
         {
           icon: Building2,
-          title: "Domy do remontu",
+          title: "Domy do remontu.",
           description:
             "Kupujemy również budynki wymagające napraw lub gruntownej modernizacji.",
         },
         {
           icon: HeartHandshake,
-          title: "Domy ze spraw spadkowych",
+          title: "Domy ze spraw spadkowych.",
           description:
             "Odziedziczone nieruchomości i współwłasność to sytuacje, które dobrze znamy.",
         },
         {
           icon: Globe2,
-          title: "Sprzedaż na odległość",
+          title: "Sprzedaż na odległość.",
           description:
             "Obsługujemy właścicieli, którzy nie mieszkają w pobliżu nieruchomości.",
         },
@@ -298,7 +298,7 @@ export const LANDINGS: Record<string, LandingData> = {
     breadcrumbLabel: "Nieruchomości spadkowe",
     hero: {
       eyebrow: "Nieruchomości spadkowe · Warmia, Mazury, Podlasie",
-      title: "Zakończ temat odziedziczonej nieruchomości",
+      title: "Zakończ temat odziedziczonej nieruchomości.",
       description:
         "Kupujemy nieruchomości i udziały pochodzące ze spraw spadkowych — również gdy postępowanie nie jest jeszcze zakończone, a spadkobierców jest kilku.",
       image: "documentsOnDesk",
@@ -307,7 +307,7 @@ export const LANDINGS: Record<string, LandingData> = {
     blocks: [
       {
         eyebrow: "Dla spadkobierców",
-        title: "Odziedziczona nieruchomość bywa źródłem napięć",
+        title: "Odziedziczona nieruchomość bywa źródłem napięć.",
         description:
           "Kilku spadkobierców, różne oczekiwania, czasem konflikt — a do tego formalności. Pomagamy uporządkować sytuację i zakończyć ją w sposób jasny dla wszystkich stron.",
         points: [
@@ -320,7 +320,7 @@ export const LANDINGS: Record<string, LandingData> = {
       },
       {
         eyebrow: "Jak to działa",
-        title: "Prowadzimy sprawę spokojnie i zgodnie z prawem",
+        title: "Prowadzimy sprawę spokojnie i zgodnie z prawem.",
         description:
           "Analizujemy stan prawny spadku i przedstawiamy pisemną propozycję. Finalizację przeprowadzamy u notariusza, dbając o poprawność formalną.",
         points: [
@@ -334,23 +334,23 @@ export const LANDINGS: Record<string, LandingData> = {
     ],
     iconGrid: {
       eyebrow: "Typowe sytuacje",
-      title: "Kiedy pomagamy w sprawach spadkowych",
+      title: "Kiedy pomagamy w sprawach spadkowych.",
       items: [
         {
           icon: ScrollText,
-          title: "Postępowanie w toku",
+          title: "Postępowanie w toku.",
           description:
             "Możemy zacząć rozmowy jeszcze przed formalnym zakończeniem sprawy spadkowej.",
         },
         {
           icon: Users,
-          title: "Kilku spadkobierców",
+          title: "Kilku spadkobierców.",
           description:
             "Kupujemy Twój udział, nawet jeśli pozostali spadkobiercy mają inne plany.",
         },
         {
           icon: Globe2,
-          title: "Spadkobierca za granicą",
+          title: "Spadkobierca za granicą.",
           description:
             "Prowadzimy sprawy z osobami mieszkającymi poza Polską, na odległość.",
         },
@@ -371,7 +371,7 @@ export const LANDINGS: Record<string, LandingData> = {
     breadcrumbLabel: "Nieruchomości zadłużone",
     hero: {
       eyebrow: "Nieruchomości zadłużone · Warmia, Mazury, Podlasie",
-      title: "Zadłużenie nie musi blokować sprzedaży nieruchomości",
+      title: "Zadłużenie nie musi blokować sprzedaży nieruchomości.",
       description:
         "Kupujemy nieruchomości obciążone zaległościami, kredytem hipotecznym lub innymi zobowiązaniami. Analizujemy strukturę zadłużenia i proponujemy rozwiązanie.",
       image: "buildingFacade",
@@ -380,7 +380,7 @@ export const LANDINGS: Record<string, LandingData> = {
     blocks: [
       {
         eyebrow: "Dla właścicieli",
-        title: "Sprzedaż zadłużonej nieruchomości jest możliwa",
+        title: "Sprzedaż zadłużonej nieruchomości jest możliwa.",
         description:
           "Zaległości czynszowe, kredyt hipoteczny czy inne obciążenia utrudniają sprzedaż na wolnym rynku — ale jej nie wykluczają. Sprawdzamy sytuację i szukamy realnego rozwiązania.",
         points: [
@@ -393,7 +393,7 @@ export const LANDINGS: Record<string, LandingData> = {
       },
       {
         eyebrow: "Jak to działa",
-        title: "Uporządkowany proces mimo obciążeń",
+        title: "Uporządkowany proces mimo obciążeń.",
         description:
           "Po analizie sytuacji przedstawiamy pisemną propozycję uwzględniającą zadłużenie. Finalizację prowadzimy u notariusza, dbając o poprawność rozliczeń.",
         points: [
@@ -407,23 +407,23 @@ export const LANDINGS: Record<string, LandingData> = {
     ],
     iconGrid: {
       eyebrow: "Typowe sytuacje",
-      title: "Jakie obciążenia analizujemy",
+      title: "Jakie obciążenia analizujemy.",
       items: [
         {
           icon: Banknote,
-          title: "Zaległości czynszowe",
+          title: "Zaległości czynszowe.",
           description:
             "Narosłe zaległości wobec wspólnoty lub spółdzielni nie przekreślają transakcji.",
         },
         {
           icon: Landmark,
-          title: "Kredyt hipoteczny",
+          title: "Kredyt hipoteczny.",
           description:
             "Uwzględniamy hipotekę w strukturze transakcji i proponowanych warunkach.",
         },
         {
           icon: Gavel,
-          title: "Inne obciążenia prawne",
+          title: "Inne obciążenia prawne.",
           description:
             "Sprawdzamy również inne wpisy i zobowiązania obciążające nieruchomość.",
         },
@@ -445,7 +445,7 @@ export const LANDINGS: Record<string, LandingData> = {
     breadcrumbLabel: "Współwłasność",
     hero: {
       eyebrow: "Współwłasność · Warmia, Mazury, Podlasie",
-      title: "Zakończ współwłasność, która ciągnie się latami",
+      title: "Zakończ współwłasność, która ciągnie się latami.",
       description:
         "Współwłasność bez porozumienia potrafi blokować decyzje przez lata. Wykupujemy udziały i pomagamy uporządkować sytuację — również gdy między współwłaścicielami jest konflikt.",
       image: "quietConversationAtTable",
@@ -454,7 +454,7 @@ export const LANDINGS: Record<string, LandingData> = {
     blocks: [
       {
         eyebrow: "Dla współwłaścicieli",
-        title: "Zniesienie współwłasności bez wieloletnich sporów",
+        title: "Zniesienie współwłasności bez wieloletnich sporów.",
         description:
           "Sądowe zniesienie współwłasności bywa długie i kosztowne. Wykup udziału to często szybsza i spokojniejsza droga do zakończenia sprawy.",
         points: [
@@ -467,7 +467,7 @@ export const LANDINGS: Record<string, LandingData> = {
       },
       {
         eyebrow: "Jak to działa",
-        title: "Jasny proces zamiast przeciągających się negocjacji",
+        title: "Jasny proces zamiast przeciągających się negocjacji.",
         description:
           "Analizujemy strukturę współwłasności i przedstawiamy pisemną propozycję wykupu Twojego udziału. Finalizację prowadzimy u notariusza.",
         points: [
@@ -481,23 +481,23 @@ export const LANDINGS: Record<string, LandingData> = {
     ],
     iconGrid: {
       eyebrow: "Typowe sytuacje",
-      title: "Kiedy pomagamy przy współwłasności",
+      title: "Kiedy pomagamy przy współwłasności.",
       items: [
         {
           icon: Users,
-          title: "Konflikt między współwłaścicielami",
+          title: "Konflikt między współwłaścicielami.",
           description:
             "Wykup udziału pozwala wyjść ze współwłasności bez czekania na porozumienie stron.",
         },
         {
           icon: Scale3D,
-          title: "Impas decyzyjny",
+          title: "Impas decyzyjny.",
           description:
             "Gdy nie da się uzgodnić sprzedaży całości, kupujemy poszczególne udziały.",
         },
         {
           icon: HeartHandshake,
-          title: "Współwłasność po spadku",
+          title: "Współwłasność po spadku.",
           description:
             "Porządkujemy sytuacje, w których nieruchomość odziedziczyło kilka osób.",
         },
@@ -519,16 +519,16 @@ export const LANDINGS: Record<string, LandingData> = {
     areaFocus: "olsztyn",
     hero: {
       eyebrow: "Olsztyn · Warmia i Mazury",
-      title: "Skup nieruchomości w Olsztynie i okolicach",
+      title: "Skup nieruchomości w Olsztynie i okolicach.",
       description:
         "Obsługujemy Olsztyn oraz całe województwo warmińsko-mazurskie. Kupujemy mieszkania, domy i udziały — również w sytuacjach spadkowych, spornych i zadłużonych.",
-      image: "regionMap",
+      image: "olsztynCity",
       points: DEFAULT_HERO_POINTS,
     },
     blocks: [
       {
         eyebrow: "Olsztyn i region",
-        title: "Znamy warmińsko-mazurski rynek nieruchomości",
+        title: "Znamy warmińsko-mazurski rynek nieruchomości.",
         description:
           "Obsługujemy całe województwo warmińsko-mazurskie — od Olsztyna po mniejsze miejscowości. Nieruchomość oglądamy na miejscu, a formalności prowadzimy korespondencyjnie lub u notariusza, bez konieczności dojazdu do biura.",
         points: [
@@ -541,7 +541,7 @@ export const LANDINGS: Record<string, LandingData> = {
       },
       {
         eyebrow: "Jak to działa",
-        title: "Prosty proces, bez wizyt w biurze",
+        title: "Prosty proces, bez wizyt w biurze.",
         description:
           "Po zgłoszeniu analizujemy sytuację nieruchomości i przedstawiamy pisemną propozycję. Spotykamy się przy nieruchomości lub kontaktujemy zdalnie, a finalizację przeprowadzamy u notariusza w dogodnej lokalizacji.",
         points: [
@@ -555,23 +555,23 @@ export const LANDINGS: Record<string, LandingData> = {
     ],
     iconGrid: {
       eyebrow: "Zakres",
-      title: "Co kupujemy w Olsztynie i regionie",
+      title: "Co kupujemy w Olsztynie i regionie.",
       items: [
         {
           icon: Home,
-          title: "Mieszkania i domy",
+          title: "Mieszkania i domy.",
           description:
             "Nieruchomości mieszkalne w Olsztynie i na terenie całego województwa.",
         },
         {
           icon: Users,
-          title: "Udziały i współwłasność",
+          title: "Udziały i współwłasność.",
           description:
             "Wykup udziałów oraz pomoc w wyjściu ze współwłasności.",
         },
         {
           icon: MapPin,
-          title: "Obsługa całego regionu",
+          title: "Obsługa całego regionu.",
           description:
             "Warmia i Mazury — nie tylko Olsztyn, ale i mniejsze miejscowości.",
         },
@@ -593,16 +593,16 @@ export const LANDINGS: Record<string, LandingData> = {
     areaFocus: "bialystok",
     hero: {
       eyebrow: "Białystok · Podlasie",
-      title: "Skup nieruchomości w Białymstoku i okolicach",
+      title: "Skup nieruchomości w Białymstoku i okolicach.",
       description:
         "Obsługujemy Białystok oraz całe województwo podlaskie. Kupujemy mieszkania, domy i udziały — również w sytuacjach spadkowych, spornych i zadłużonych.",
-      image: "regionMap",
+      image: "bialystokCity",
       points: DEFAULT_HERO_POINTS,
     },
     blocks: [
       {
         eyebrow: "Białystok i region",
-        title: "Działamy na terenie całego Podlasia",
+        title: "Działamy na terenie całego Podlasia.",
         description:
           "Obsługujemy województwo podlaskie w całości — od Białegostoku po mniejsze miejscowości. Do nieruchomości dojeżdżamy i oglądamy ją na miejscu, a formalności prowadzimy korespondencyjnie lub u notariusza, bez konieczności wizyty w biurze.",
         points: [
@@ -615,7 +615,7 @@ export const LANDINGS: Record<string, LandingData> = {
       },
       {
         eyebrow: "Jak to działa",
-        title: "Prosty proces, bez wizyt w biurze",
+        title: "Prosty proces, bez wizyt w biurze.",
         description:
           "Po zgłoszeniu analizujemy sytuację nieruchomości i przedstawiamy pisemną propozycję. Spotykamy się przy nieruchomości lub kontaktujemy zdalnie, a finalizację przeprowadzamy u notariusza w dogodnej lokalizacji.",
         points: [
@@ -629,23 +629,23 @@ export const LANDINGS: Record<string, LandingData> = {
     ],
     iconGrid: {
       eyebrow: "Zakres",
-      title: "Co kupujemy w Białymstoku i regionie",
+      title: "Co kupujemy w Białymstoku i regionie.",
       items: [
         {
           icon: Home,
-          title: "Mieszkania i domy",
+          title: "Mieszkania i domy.",
           description:
             "Nieruchomości mieszkalne w Białymstoku i na terenie całego województwa.",
         },
         {
           icon: Users,
-          title: "Udziały i współwłasność",
+          title: "Udziały i współwłasność.",
           description:
             "Wykup udziałów oraz pomoc w wyjściu ze współwłasności.",
         },
         {
           icon: MapPin,
-          title: "Obsługa całego regionu",
+          title: "Obsługa całego regionu.",
           description:
             "Podlasie — nie tylko Białystok, ale i mniejsze miejscowości.",
         },

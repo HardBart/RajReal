@@ -25,7 +25,7 @@ export function ServiceArea() {
 
         <div className="mt-14 grid gap-6 lg:grid-cols-2">
           {SERVICE_AREAS.map((area, i) => {
-            const photo = AREA_PHOTOS[area.id] ?? STOCK_PHOTOS.regionMap;
+            const photo = AREA_PHOTOS[area.id] ?? STOCK_PHOTOS.buildingFacade;
             return (
             <Reveal key={area.id} delay={i * 0.1}>
               <div className="overflow-hidden rounded-2xl border border-border bg-card">
