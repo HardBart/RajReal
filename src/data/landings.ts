@@ -64,9 +64,9 @@ export type LandingData = {
 };
 
 const DEFAULT_HERO_POINTS = [
-  { icon: ShieldCheck, label: "Transparentny proces" },
-  { icon: Handshake, label: "Uczciwa wycena" },
-  { icon: Clock, label: "Tempo dopasowane do Ciebie" },
+  { icon: ShieldCheck, label: "Transparentny proces." },
+  { icon: Handshake, label: "Uczciwa wycena." },
+  { icon: Clock, label: "Tempo dopasowane do Ciebie." },
 ];
 
 export const LANDINGS: Record<string, LandingData> = {

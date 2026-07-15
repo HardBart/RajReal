@@ -9,7 +9,7 @@ export function ContactSection() {
       <div className="container-page">
         <SectionHeading
           eyebrow="Kontakt"
-          title="Opisz swoją sytuację — odezwiemy się z propozycją"
+          title="Opisz swoją sytuację — odezwiemy się z propozycją."
           description="Formularz nie wymaga załączników. Dokumenty dotyczące nieruchomości omówimy w kolejnym kroku, bezpiecznym kanałem."
           align="center"
           className="mx-auto"

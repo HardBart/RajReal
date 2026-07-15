@@ -45,7 +45,7 @@ export function Faq() {
       <div className="container-page grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
         <SectionHeading
           eyebrow="FAQ"
-          title="Najczęściej zadawane pytania"
+          title="Najczęściej zadawane pytania."
           description="Nie znalazłeś odpowiedzi na swoje pytanie? Napisz do nas — odpowiadamy indywidualnie na każde zgłoszenie."
         />
 

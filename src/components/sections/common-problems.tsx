@@ -5,37 +5,37 @@ import { SectionHeading } from "@/components/shared/section-heading";
 const PROBLEMS = [
   {
     icon: Users,
-    title: "Konflikt między współwłaścicielami",
+    title: "Konflikt między współwłaścicielami.",
     description:
       "Współwłaściciele nie mogą dojść do porozumienia co do sprzedaży, podziału lub sposobu korzystania z nieruchomości.",
   },
   {
     icon: FileWarning,
-    title: "Skomplikowana sprawa spadkowa",
+    title: "Skomplikowana sprawa spadkowa.",
     description:
       "Nieruchomość odziedziczona przez kilku spadkobierców, często bez zakończonego postępowania spadkowego.",
   },
   {
     icon: Landmark,
-    title: "Zadłużona nieruchomość",
+    title: "Zadłużona nieruchomość.",
     description:
       "Zaległości czynszowe, kredyt hipoteczny lub inne obciążenia utrudniające sprzedaż na wolnym rynku.",
   },
   {
     icon: Globe2,
-    title: "Mieszkanie za granicą",
+    title: "Mieszkanie za granicą.",
     description:
       "Trudność w zajmowaniu się formalnościami i sprzedażą na odległość, bez konieczności przyjazdu do Polski.",
   },
   {
     icon: Gavel,
-    title: "Problemy prawne nieruchomości",
+    title: "Problemy prawne nieruchomości.",
     description:
       "Nieuregulowany stan prawny, brak księgi wieczystej lub inne kwestie formalne blokujące standardową sprzedaż.",
   },
   {
     icon: Hourglass,
-    title: "Potrzeba szybkiego zakończenia sprawy",
+    title: "Potrzeba szybkiego zakończenia sprawy.",
     description:
       "Chęć zamknięcia tematu nieruchomości bez miesięcy oczekiwania typowych dla sprzedaży na wolnym rynku.",
   },
@@ -47,7 +47,7 @@ export function CommonProblems() {
       <div className="container-page">
         <SectionHeading
           eyebrow="Rozumiemy trudne sytuacje"
-          title="Najczęstsze problemy, z którymi się do nas zgłaszacie"
+          title="Najczęstsze problemy, z którymi się do nas zgłaszacie."
           align="center"
           className="mx-auto"
         />

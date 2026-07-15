@@ -5,25 +5,25 @@ import { SectionHeading } from "@/components/shared/section-heading";
 const REASONS = [
   {
     icon: Scale,
-    title: "Działamy zgodnie z prawem",
+    title: "Działamy zgodnie z prawem.",
     description:
       "Każda transakcja jest przygotowywana i przeprowadzana zgodnie z obowiązującymi przepisami, z udziałem notariusza.",
   },
   {
     icon: Eye,
-    title: "Transparentne warunki",
+    title: "Transparentne warunki.",
     description:
       "Przedstawiamy jasną wycenę i warunki transakcji na piśmie, zanim podejmiesz jakąkolwiek decyzję.",
   },
   {
     icon: MessageCircle,
-    title: "Jasna komunikacja",
+    title: "Jasna komunikacja.",
     description:
       "Tłumaczymy proces krok po kroku, bez prawniczego żargonu i bez wywierania presji czasowej.",
   },
   {
     icon: FileCheck,
-    title: "Rzetelna analiza sytuacji",
+    title: "Rzetelna analiza sytuacji.",
     description:
       "Zanim złożymy propozycję, dokładnie analizujemy stan prawny nieruchomości — również w skomplikowanych sprawach.",
   },
@@ -35,7 +35,7 @@ export function Trust() {
       <div className="container-page">
         <SectionHeading
           eyebrow="Dlaczego warto nam zaufać"
-          title="Podchodzimy do każdej sprawy z powagą, na jaką zasługuje"
+          title="Podchodzimy do każdej sprawy z powagą, na jaką zasługuje."
           description="Nie jesteśmy pośrednikiem ani kancelarią — jesteśmy nabywcą, który działa jawnie i przewidywalnie na każdym etapie."
         />
 

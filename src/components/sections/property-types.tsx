@@ -5,17 +5,17 @@ import { STOCK_PHOTOS } from "@/data/images";
 
 const TYPES = [
   {
-    title: "Mieszkania",
+    title: "Mieszkania.",
     description: "W blokach, kamienicach i nowym budownictwie.",
     image: STOCK_PHOTOS.modernApartmentInterior,
   },
   {
-    title: "Domy jednorodzinne",
+    title: "Domy jednorodzinne.",
     description: "Niezależnie od stanu technicznego i wieku budynku.",
     image: STOCK_PHOTOS.singleFamilyHouse,
   },
   {
-    title: "Udziały w nieruchomościach",
+    title: "Udziały w nieruchomościach.",
     description: "Częściowa własność mieszkania, domu lub gruntu.",
     image: STOCK_PHOTOS.buildingFacade,
   },
@@ -27,7 +27,7 @@ export function PropertyTypes() {
       <div className="container-page">
         <SectionHeading
           eyebrow="Zakres skupu"
-          title="Jakie nieruchomości kupujemy"
+          title="Jakie nieruchomości kupujemy."
           description="Skupiamy się na nieruchomościach mieszkalnych — całych oraz w udziałach."
         />
 

@@ -4,25 +4,25 @@ import { SectionHeading } from "@/components/shared/section-heading";
 const STEPS = [
   {
     number: "01",
-    title: "Opisujesz swoją sytuację",
+    title: "Opisujesz swoją sytuację.",
     description:
       "Wypełniasz formularz lub dzwonisz do nas. Nie wymagamy na tym etapie żadnych dokumentów ani załączników.",
   },
   {
     number: "02",
-    title: "Analizujemy stan prawny",
+    title: "Analizujemy stan prawny.",
     description:
       "Sprawdzamy sytuację nieruchomości — również gdy jest to udział, sprawa spadkowa lub nieruchomość zadłużona.",
   },
   {
     number: "03",
-    title: "Przedstawiamy propozycję",
+    title: "Przedstawiamy propozycję.",
     description:
       "Otrzymujesz jasną, pisemną propozycję warunków — bez presji czasowej i bez zobowiązań.",
   },
   {
     number: "04",
-    title: "Finalizujemy transakcję",
+    title: "Finalizujemy transakcję.",
     description:
       "Po Twojej akceptacji ustalamy dogodny termin u notariusza i formalnie kończymy sprawę.",
   },
@@ -34,7 +34,7 @@ export function Process() {
       <div className="container-page">
         <SectionHeading
           eyebrow="Jak wygląda proces"
-          title="Cztery jasne kroki, od pierwszego kontaktu do finalizacji"
+          title="Cztery jasne kroki, od pierwszego kontaktu do finalizacji."
           description="Każdy etap wyjaśniamy, zanim do niego dojdzie. Możesz zrezygnować na dowolnym etapie przed podpisaniem umowy."
         />
 

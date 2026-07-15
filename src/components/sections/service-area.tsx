@@ -17,7 +17,7 @@ export function ServiceArea() {
       <div className="container-page">
         <SectionHeading
           eyebrow="Obszar działania"
-          title="Działamy na terenie Warmii, Mazur i Podlasia"
+          title="Działamy na terenie Warmii, Mazur i Podlasia."
           description="Obsługujemy dwa województwa — warmińsko-mazurskie i podlaskie. Pracujemy zdalnie: nieruchomość oglądamy na miejscu, a formalności prowadzimy korespondencyjnie lub u notariusza."
           align="center"
           className="mx-auto"
@@ -42,7 +42,7 @@ export function ServiceArea() {
                   <div className="flex items-center gap-2 text-primary">
                     <MapPin className="size-5" />
                     <h3 className="text-xl font-medium">
-                      {area.city} i okolice
+                      {area.city} i okolice.
                     </h3>
                   </div>
                   <p className="mt-2 text-sm text-muted-foreground">

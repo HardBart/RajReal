@@ -33,7 +33,7 @@ export function SharesSpecialization() {
             Nasza specjalizacja
           </span>
           <h2 className="text-3xl font-medium tracking-tight text-primary sm:text-4xl">
-            Skup udziałów w nieruchomościach to nasza podstawowa działalność
+            Skup udziałów w nieruchomościach to nasza podstawowa działalność.
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">
             Współwłasność bywa źródłem wieloletnich sporów. Wykupujemy Twój

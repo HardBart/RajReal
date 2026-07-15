@@ -12,7 +12,7 @@ export function CoverageMap() {
       <div className="container-page">
         <SectionHeading
           eyebrow="Zasięg działania"
-          title="Obsługujemy Warmię, Mazury i Podlasie"
+          title="Obsługujemy Warmię, Mazury i Podlasie."
           description="Nie prowadzimy stacjonarnego biura — pracujemy zdalnie i dojeżdżamy do nieruchomości. Dzięki temu obsługujemy oba województwa w całości, także mniejsze miejscowości."
           align="center"
           className="mx-auto"
@@ -23,7 +23,7 @@ export function CoverageMap() {
             <div className="rounded-2xl border border-border bg-card p-7">
               <MonitorSmartphone className="size-6 text-primary" strokeWidth={1.5} />
               <h3 className="mt-4 text-lg font-medium text-foreground">
-                Jak pracujemy
+                Jak pracujemy.
               </h3>
               <ul className="mt-4 space-y-3 text-sm leading-relaxed text-muted-foreground">
                 <li className="flex items-start gap-2.5">

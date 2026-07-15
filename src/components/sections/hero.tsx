@@ -5,9 +5,9 @@ import { buttonVariants } from "@/components/ui/button";
 import { STOCK_PHOTOS } from "@/data/images";
 
 const HERO_POINTS = [
-  { icon: ShieldCheck, label: "Transparentny proces" },
-  { icon: Handshake, label: "Uczciwa wycena" },
-  { icon: Clock, label: "Tempo dopasowane do Ciebie" },
+  { icon: ShieldCheck, label: "Transparentny proces." },
+  { icon: Handshake, label: "Uczciwa wycena." },
+  { icon: Clock, label: "Tempo dopasowane do Ciebie." },
 ];
 
 export function Hero() {
@@ -20,7 +20,7 @@ export function Hero() {
           </span>
           <h1 className="text-4xl font-medium leading-[1.1] tracking-tight text-primary sm:text-5xl lg:text-[3.4rem]">
             Profesjonalny skup udziałów i nieruchomości,{" "}
-            <span className="text-gold-foreground">bez pośpiechu i presji</span>
+            <span className="text-gold-foreground">bez pośpiechu i presji.</span>
           </h1>
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">
             Pomagamy współwłaścicielom, spadkobiercom i osobom w trudnej
