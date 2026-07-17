@@ -1,11 +1,28 @@
+import Image from "next/image";
 import { Mail, Phone, MapPinned, MonitorSmartphone } from "lucide-react";
 import { SectionHeading } from "@/components/shared/section-heading";
 import { CONTACT, SERVICE_AREAS } from "@/config/site";
+import { STOCK_PHOTOS } from "@/data/images";
 
 /**
  * Sekcja zasięgu działania — zamiast „mapy biur" (firma działa zdalnie).
- * Pokazuje obsługiwane województwa na mapach oraz model pracy bez biura.
+ * Pokazuje obsługiwane województwa oraz model pracy bez biura.
+ *
+ * Świadomie NIE osadzamy map Google: iframe łączyłby przeglądarkę odwiedzającego
+ * z Google (IP + cookies, transfer poza EOG) jeszcze przed zgodą. Zamiast tego
+ * własne zdjęcia symboli regionów — dzięki temu polityka prywatności może
+ * uczciwie deklarować brak zewnętrznych osadzeń i brak transferu poza EOG.
  */
+const AREA_MEDIA = {
+  olsztyn: {
+    photo: STOCK_PHOTOS.cormorantMazury,
+    caption: "Kormoran — symbol mazurskich jezior.",
+  },
+  bialystok: {
+    photo: STOCK_PHOTOS.bisonPodlasie,
+    caption: "Żubr — symbol Podlasia i Puszczy Białowieskiej.",
+  },
+} as const;
 export function CoverageMap() {
   return (
     <section className="section-y bg-secondary/40">
@@ -67,24 +84,28 @@ export function CoverageMap() {
           </div>
 
           <div className="grid gap-6 sm:grid-cols-2">
-            {SERVICE_AREAS.map((area) => (
-              <div key={area.id} className="space-y-3">
-                <h3 className="text-sm font-semibold uppercase tracking-wide text-muted-foreground">
-                  {area.region}
-                </h3>
-                <div className="overflow-hidden rounded-2xl border border-border">
-                  <iframe
-                    title={`Obszar działania — ${area.region}`}
-                    src={`https://www.google.com/maps?q=${encodeURIComponent(
-                      area.mapEmbedQuery,
-                    )}&output=embed`}
-                    className="h-56 w-full"
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
-                  />
-                </div>
-              </div>
-            ))}
+            {SERVICE_AREAS.map((area) => {
+              const media = AREA_MEDIA[area.id];
+              return (
+                <figure key={area.id} className="space-y-3">
+                  <h3 className="text-sm font-semibold uppercase tracking-wide text-muted-foreground">
+                    {area.region}
+                  </h3>
+                  <div className="relative h-56 w-full overflow-hidden rounded-2xl border border-border">
+                    <Image
+                      src={media.photo.src}
+                      alt={media.photo.alt}
+                      fill
+                      sizes="(min-width: 640px) 25vw, 90vw"
+                      className="object-cover"
+                    />
+                  </div>
+                  <figcaption className="text-xs text-muted-foreground">
+                    {media.caption}
+                  </figcaption>
+                </figure>
+              );
+            })}
           </div>
         </div>
       </div>

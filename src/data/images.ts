@@ -38,6 +38,16 @@ export const STOCK_PHOTOS = {
     src: "https://images.unsplash.com/photo-1449844908441-8829872d2607?auto=format&fit=crop&w=1600&q=80",
     alt: "Drewniany dom wśród drzew o poranku",
   },
+  cormorantMazury: {
+    // Kormoran na słupku nad jeziorem — symbol mazurskich jezior
+    src: "https://images.unsplash.com/photo-1699995517725-664418040d38?auto=format&fit=crop&w=1200&q=80",
+    alt: "Kormoran suszący skrzydła na słupku nad jeziorem",
+  },
+  bisonPodlasie: {
+    // Żubr na łące pod lasem — symbol Podlasia i Puszczy Białowieskiej
+    src: "https://images.unsplash.com/photo-1762096078807-bbdf9a1cc02b?auto=format&fit=crop&w=1200&q=80",
+    alt: "Żubr pasący się na łące na skraju lasu",
+  },
   olsztynCity: {
     // Rynek Starego Miasta w Olsztynie (Unsplash: xA_rhdMHP30)
     src: "https://images.unsplash.com/photo-1679871349105-5938aae97c6f?auto=format&fit=crop&w=1600&q=80",

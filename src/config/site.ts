@@ -32,7 +32,6 @@ export type ServiceArea = {
   city: string;
   region: string;
   blurb: string;
-  mapEmbedQuery: string;
 };
 
 export const SERVICE_AREAS: ServiceArea[] = [
@@ -42,7 +41,6 @@ export const SERVICE_AREAS: ServiceArea[] = [
     region: "warmińsko-mazurskie",
     blurb:
       "Olsztyn i całe województwo warmińsko-mazurskie — miasto, mniejsze miejscowości i tereny wiejskie.",
-    mapEmbedQuery: "województwo warmińsko-mazurskie, Polska",
   },
   {
     id: "bialystok",
@@ -50,7 +48,6 @@ export const SERVICE_AREAS: ServiceArea[] = [
     region: "podlaskie",
     blurb:
       "Białystok i całe województwo podlaskie — obsługujemy region w całości, bez konieczności dojazdu do biura.",
-    mapEmbedQuery: "województwo podlaskie, Polska",
   },
 ];
 
