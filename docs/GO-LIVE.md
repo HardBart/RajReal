@@ -1,93 +1,112 @@
-# RajReal — Checklista wdrożeniowa (Go-Live)
+# RajReal — stan wdrożenia i runbook
 
-Ten dokument jest **jedynym źródłem prawdy** o tym, co musi się wydarzyć przed publikacją serwisu RajReal (podmiot: Raj Real Estate Invest sp. z o.o., NIP 7393929439). Zanim strona trafi na produkcję, każdy „twardy bloker" z listy poniżej musi być odhaczony.
+**🚀 Serwis opublikowany: 17 lipca 2026** — [https://rajreal.pl](https://rajreal.pl) jest publicznie dostępny.
 
-> **Ważne:** znaczna część zadań jest **poza kodem** — nie da się ich „zbudować" w repozytorium. Dotyczy to m.in. rejestracji domeny, potwierdzenia podmiotu prawnego, realnej treści dokumentów (polityka prywatności, regulamin) oraz Profilu Firmy w Google. Kod jest gotowy w stopniu, w jakim może być bez tych decyzji biznesowych i prawnych.
+Podmiot: **Raj Real Estate Invest sp. z o.o.**, NIP 7393929439, KRS 0000793577.
+
+Ten dokument był checklistą przed startem. Po publikacji pełni rolę **jedynego źródła prawdy o stanie wdrożenia** oraz **runbooka** (jak aktualizować stronę, jak cofnąć zmiany, co jeszcze przed nami).
 
 ---
 
 ## Status faz
 
-- [x] **Faza 1** — scaffold projektu, design system, strona główna, landing wzorcowy `/skup-udzialow`, formularz kontaktowy (wariant B), szkielety polityki prywatności i regulaminu, cookie banner.
-- [x] **Faza 2** — pozostałe landingi SEO oraz pełne SEO: metadata, Open Graph, JSON-LD, `robots.txt`, `sitemap.xml`.
+- [x] **Faza 1** — scaffold, design system, strona główna, landing wzorcowy `/skup-udzialow`, formularz kontaktowy (wariant B), strony prawne, cookie banner.
+- [x] **Faza 2** — pozostałe landingi SEO + pełne SEO: metadata, Open Graph, JSON-LD, `robots.txt`, `sitemap.xml`.
 - [x] **Faza 3 / blog** — blog MDX, 3 wpisy, kategorie, disclaimer prawny, JSON-LD `BlogPosting`.
-- [ ] **Faza 3 / optymalizacja** — pass Core Web Vitals, cel Lighthouse 90+. **DO ZROBIENIA** (zadanie w tle, nie blokuje startu).
+- [ ] **Faza 3 / optymalizacja** — pass Core Web Vitals, cel Lighthouse 90+. *Nie blokuje — zadanie w tle.*
 
 ---
 
-## Łańcuch zależności (kolejność krytyczna)
+## ✅ Twarde blokery — wszystkie zamknięte
 
-Zadania blokują się nawzajem — nie da się zrobić kroku dalej bez ukończenia poprzedniego:
+- [x] **Nazwa + domena** — RajReal → `rajreal.pl`, kupiona na Hostinger, DNS wskazuje na VPS (72.60.18.217). Wszystkie pełne URL-e czytają `NEXT_PUBLIC_SITE_URL`.
+- [x] **Podmiot prawny potwierdzony** — Raj Real Estate Invest sp. z o.o. (dane z KRS): KRS 0000793577, NIP 7393929439, REGON 383807208, kapitał 5 000,00 zł, siedziba ul. Dworcowa 18/45, 10-436 Olsztyn, Sąd Rejonowy w Olsztynie VIII Wydz. Gospodarczy KRS.
+- [x] **E-mail / skrzynka na leady** — `kontakt@rajreal.pl` (Hostinger, UE). Wysyłka przez **SMTP** (`smtp.hostinger.com:465`). Test end-to-end na produkcji: mail dochodzi **do Odebranych** (nie spam).
+- [x] **Polityka prywatności + regulamin** — realna treść na `/polityka-prywatnosci` i `/regulamin`, zero placeholderów.
+- [x] **Realne dane w stopce** — nazwa, siedziba, NIP, REGON, KRS, **kapitał zakładowy** (wymóg art. 206 KSH), sąd rejestrowy.
+- [x] **Realne dane kontaktowe** — tel. **881 244 700**, e-mail **kontakt@rajreal.pl**.
+- [x] **Cel hostingu** — VPS Hostinger (Vercel odrzucony).
+- [x] **DNS** — A `@` → 72.60.18.217, `www` → CNAME na apex. Propagacja potwierdzona.
+- [x] **Środowisko produkcyjne** — Ubuntu 24.04, Node 24, app w `/var/www/rajreal` pod **PM2 (port 3003)**, nginx reverse proxy, HTTPS Let's Encrypt z auto-odnawianiem.
+- [x] **Deploy + test** — strona live, formularz przetestowany na produkcji (`{"ok":true}` + mail).
 
-```
-NAZWA + DOMENA  (✅ RajReal → rajreal.pl, kupiona na Hostinger)
-      │
-      ▼
-POTWIERDZENIE PODMIOTU (kto jest administratorem danych)
-      │
-      ▼
-RESEND / EMAIL (weryfikacja domeny, skrzynka na leady)
-      │
-      ▼
-POLITYKA PRYWATNOŚCI + REGULAMIN (realna treść)
-      │
-      ▼
-DNS + ŚRODOWISKO VPS (konfiguracja DNS na Hostinger → przygotowanie VPS)
-      │
-      ▼
-DEPLOY na VPS Hostinger (build, zmienne środowiskowe, HTTPS, test formularza end-to-end)
-```
+## ⚖️ Prawne
 
-**Dlaczego ta kolejność:**
-- **Domena** jest już kupiona (`rajreal.pl`, Hostinger) i ustawiona w `NEXT_PUBLIC_SITE_URL` — canonical, OG, sitemap, robots generują się poprawnie.
-- Bez **potwierdzenia podmiotu** nie wiadomo, kto jest administratorem danych — a to musi znaleźć się w polityce prywatności i w stopce (NIP/REGON).
-- Bez działającego **e-maila** formularz nie dostarczy leadów (a leady to dane osobowe).
-- Bez **realnej polityki i regulaminu** publikacja formularza zbierającego dane osobowe jest niezgodna z RODO.
-- **DNS + środowisko VPS** — cel wdrożenia ustalony: **VPS Hostinger**. Trzeba wskazać DNS na VPS i przygotować serwer, zanim ruszy deploy.
-- **Deploy** to ostatni krok — spina wszystko powyżej.
+- [x] **Decyzja Resend vs SMTP** → **SMTP Hostinger (UE)**. Brak transferu do państwa trzeciego → prostsza polityka, bez DPA/SCC dla USA.
+- [x] **Polityka** — podstawy przetwarzania (art. 6 ust. 1 lit. a/b/c/f), retencja, prawa podmiotu, cookies spójne z bannerem.
+- [x] **Dane osób trzecich** — klauzula z **art. 14 RODO** (współwłaściciele, spadkobiercy, nr KW) — specyfika skupu udziałów, brak w typowych szablonach.
+- [x] **Brak oferty** — regulamin § 6: art. 66 vs 71 k.c. + akt notarialny (art. 158 k.c.) → ochrona przed związaniem ceną.
+- [x] **Rola potencjalnego nabywcy** + brak porad prawnych/podatkowych — spójne z disclaimerem na blogu.
+- [ ] **Merytoryczny przegląd treści przez prawnika** (blog + landingi + dokumenty). Dokumenty są zgodne z tym, co strona faktycznie robi, ale nie były weryfikowane przez prawnika. **Zalecane, nie blokujące.**
 
-**Niezależne (mogą iść równolegle, NIE blokują startu):**
-- Pass optymalizacyjny **CWV / Lighthouse**.
-- **Merytoryczny przegląd treści** pod kątem ścisłości prawnej.
+## 🟢 Operacyjne / wzrost
 
-Te dwa strumienie warto zacząć wcześnie, ale start produkcyjny nie może na nie czekać.
+- [ ] **Google Search Console** — dodać `rajreal.pl`, zgłosić `https://rajreal.pl/sitemap.xml`. *Priorytet — przyspiesza indeksację.*
+- [ ] **Profil Firmy w Google** (Olsztyn / Podlasie) — weryfikacja bywa pocztą i trwa. *Zwykle największe źródło telefonów lokalnie.*
+- [ ] **Analityka** — obecnie **brak jakichkolwiek trackerów** (świadomie). Jeśli dojdzie GA4/Plausible: skrypty muszą być blokowane do zgody, a polityka (pkt 5, 7, 12) i banner wymagają aktualizacji.
+- [ ] **Auto-potwierdzenie mailem do zgłaszającego** („odebraliśmy zgłoszenie").
+- [ ] **Pass CWV / Lighthouse 90+** — wymiary i priorytety obrazów, `sizes`, ewentualnie własne pliki zamiast Unsplash.
+- [x] ~~Realne zdjęcia biur~~ — **nieaktualne**: firma nie ma biura stacjonarnego, sloty usunięte; regiony pokazują zdjęcia miast oraz symboli (kormoran / żubr).
 
 ---
 
-## Checklista
+## 🔧 Runbook — jak to obsługiwać
 
-### 🔴 Twarde blokery (bez tego brak startu)
+### Aktualizacja strony
+Zmiany w kodzie → `git push` → na serwerze **jedna komenda**:
+```bash
+bash /var/www/rajreal/deploy.sh
+```
+(robi `git fetch` + `reset --hard origin/main` + `npm install` + `npm run build` + `pm2 restart rajreal` + `pm2 save`)
 
-- [x] Nazwa + domena — **RajReal → `rajreal.pl`, domena kupiona na Hostinger**, ustawiona w `NEXT_PUBLIC_SITE_URL`. (Pozostaje do domknięcia: weryfikacja kolizji znaku w UPRP/EUIPO, jeśli jeszcze nie zrobiona.)
-- [ ] Potwierdzenie podmiotu prawnego (JDG vs sp. z o.o.) — kto jest administratorem danych; decyzja przed wpisaniem NIP. (Znane: Raj Real Estate Invest sp. z o.o., NIP 7393929439 — już wpisane w config/stopkę/JSON-LD.)
-- [ ] Email/Resend: weryfikacja domeny `rajreal.pl` (SPF/DKIM/DMARC) + monitorowana skrzynka na leady (leady zawierają dane osobowe: imię, telefon, nr KW, opis sprawy).
-- [ ] Polityka prywatności + regulamin — REALNA treść (nie szkielet), z imiennym wskazaniem administratora.
-- [x] Realne dane w stopce — komplet z KRS (0000793577): nazwa, forma, NIP 7393929439, REGON 383807208, kapitał 5 000,00 zł, siedziba ul. Dworcowa 18/45, 10-436 Olsztyn, sąd rejestrowy. Wpisane w stopkę, politykę, regulamin i JSON-LD.
-- [ ] Realne dane kontaktowe — **telefon ZROBIONY (881 244 700)**; pozostaje `TODO_EMAIL` (firmowy adres e-mail, docelowo `@rajreal.pl`).
-- [x] **Cel hostingu ustalony: VPS Hostinger** (decyzja ostateczna; Vercel odpada).
-- [ ] **Konfiguracja DNS `rajreal.pl` (panel Hostinger):** rekordy A/AAAA na IP VPS; redirect `www` → apex; rekordy pod e-mail (SPF/DKIM/DMARC — spójne z zadaniem e-mail powyżej).
-- [ ] **Środowisko produkcyjne na VPS Hostinger:** Node (wersja zgodna z Next 16), `next build` + `next start` pod menedżerem procesów (PM2/systemd), reverse proxy nginx + HTTPS (Let's Encrypt), zmienne środowiskowe na serwerze, firewall, auto-restart.
-- [ ] **Deploy na VPS + test:** build, zmienne środowiskowe (klucz Resend/SMTP, `NEXT_PUBLIC_SITE_URL=https://rajreal.pl`, `CONTACT_*`), HTTPS, **test formularza end-to-end na produkcji** (dostarczenie leada).
+> `.env.local` z hasłem SMTP jest **poza gitem** — deploy go nie nadpisze.
 
-### ⚖️ Prawne (łatwe do przeoczenia)
+### Tryb „strona w budowie"
+```bash
+# włącz
+cp /etc/nginx/sites-available/rajreal.pl.MAINT-bak /etc/nginx/sites-available/rajreal.pl && nginx -t && systemctl reload nginx
+# wyłącz (powrót na live)
+cp /etc/nginx/sites-available/rajreal.pl.LIVE-bak /etc/nginx/sites-available/rajreal.pl && nginx -t && systemctl reload nginx
+```
+W trybie „w budowie" podgląd pełnej strony: `https://rajreal.pl/podglad-2026` (ustawia ciasteczko na 7 dni).
 
-- [ ] DECYZJA: Resend (USA, transfer do państwa trzeciego → wymaga ujawnienia w polityce + DPA + mechanizm SCC/DPF) vs SMTP z UE (brak transferu, prostsza polityka). Rozstrzygnąć PRZED pisaniem polityki, bo zmienia jej treść.
-- [ ] Jeśli Resend: podpisany DPA + weryfikacja aktualnego mechanizmu transferu w dokumentacji dostawcy.
-- [ ] Polityka: poprawne podstawy przetwarzania (kontakt: art. 6 ust. 1 lit. f lub b; marketing: lit. a), retencja, prawa podmiotu, cookies spójne z bannerem.
-- [ ] Merytoryczny przegląd treści (blog + landingi) pod kątem ścisłości prawnej — disclaimer nie chroni przed nieprawdziwą treścią. Do wykonania przez właściciela (prawnik).
+### Diagnostyka
+```bash
+pm2 ls                 # status aplikacji
+pm2 logs rajreal       # logi (wyjście: Ctrl+C)
+pm2 restart rajreal --update-env
+nginx -t && systemctl reload nginx
+```
 
-### 🟢 Operacyjne / wzrost (nie blokuje startu, zacząć równolegle)
+### ⚠️ Pułapki, które już nas ugryzły
+1. **Po `systemctl reload nginx` odczekaj ~3 s przed testem.** Dwa razy zmyliło nas to, że zmiana „nie działa" — a nginx po prostu jeszcze nie przełączył workerów.
+2. **Porty 3000–3002 są zajęte** przez inne projekty na tym VPS (m.in. apka `spadek` na 3001). **RajReal działa na 3003.** Nigdy nie przywracaj configu wskazującego na 3001 — podstawi cudzą stronę pod `rajreal.pl`.
+3. **`npm ci` nie zadziała** — lockfile powstał na Windowsie i brakuje w nim paczek linuxowych. Deploy używa `npm install` i to jest celowe.
+4. **Nie używaj `!!` / `!!!` w komendach** wklejanych do interaktywnego bash — historia poleceń je rozwija i psuje skrypt.
 
-- [ ] Profil Firmy w Google ×2 (Olsztyn, Białystok) — weryfikacja bywa pocztą i trwa, zacząć wcześnie.
-- [ ] Realne zdjęcia biur (podmiana slotów „TODO: realne zdjęcie biura").
-- [ ] Analityka od dnia 1 (GA4 lub Plausible) zintegrowana z consent-mode cookie bannera.
-- [ ] Auto-potwierdzenie mailem do zgłaszającego („odebraliśmy zgłoszenie") — wymaga poprawnego DKIM/DMARC dla dostarczalności.
-- [ ] Pass optymalizacyjny CWV / Lighthouse 90+ (realne wymiary i priorytety obrazów, `sizes`, ograniczenie remote'ów Unsplash na własne pliki). Zadanie w tle — nie kamień milowy.
+---
+
+## Kluczowe fakty techniczne
+
+| | |
+|---|---|
+| Repo | `github.com/HardBart/RajReal` (main) |
+| Serwer | VPS Hostinger, Ubuntu 24.04, IP 72.60.18.217, **Vilnius (Litwa, UE)** |
+| Katalog | `/var/www/rajreal` |
+| Proces | PM2, nazwa `rajreal`, **port 3003** |
+| Poczta | `kontakt@rajreal.pl`, SMTP `smtp.hostinger.com:465` |
+| Procesor | **Hostinger International Ltd.**, Larnaka, Cypr (UE) |
+| Prywatność | **zero zewnętrznych hostów** — brak Google, trackerów, map; fonty i zdjęcia serwowane z własnego serwera |
 
 ---
 
 ## Uwaga o środowisku (dev-flow)
 
-W pliku `C:\Users\barto\.claude\launch.json` konfiguracja o nazwie **„dev" uruchamia inny projekt** (Najem Okazjonalny), dlatego serwer deweloperski RajReal startuje osobno (np. `localhost:3001`, gdy port 3000 jest zajęty przez inny projekt).
+W `C:\Users\barto\.claude\launch.json` konfiguracja „dev" uruchamia **inny projekt** (Najem Okazjonalny). Serwer deweloperski RajReal uruchamiaj z katalogu projektu:
+```powershell
+cd C:\Users\barto\projects\terra-polnoc
+npm run dev
+```
+Nie blokuje niczego — dotyczy wyłącznie lokalnej wygody.
 
-Do rozwiązania przed wygodnym dev-flow (np. dedykowana konfiguracja `launch.json` w katalogu projektu z jednoznaczną nazwą). **Nie blokuje startu produkcyjnego** — dotyczy wyłącznie lokalnej wygody pracy.
+> **Nazwa katalogu** to wciąż `terra-polnoc` (historyczna, robocza nazwa projektu). Sam kod, repo i marka są w pełni przemianowane na RajReal — zmiana nazwy katalogu jest kosmetyczna i nieobowiązkowa.
