@@ -16,8 +16,9 @@ import { buildMetadata } from "@/lib/seo";
 /** Data ostatniej aktualizacji dokumentu — zmieniaj przy każdej zmianie treści. */
 const UPDATED_AT = "14 lipca 2026";
 
-/** TODO: wpisać dokładną nazwę podmiotu Hostinger z faktury/regulaminu. */
-const HOSTING_PROVIDER = "TODO_NAZWA_PODMIOTU_HOSTINGER";
+/** Procesor: hosting VPS + poczta firmowa. Podmiot z Cypru (UE), serwery na Litwie (UE). */
+const HOSTING_PROVIDER =
+  "Hostinger International Ltd. z siedzibą pod adresem 61 Lordou Vironos Street, 6023 Larnaka, Cypr (Unia Europejska)";
 
 export const metadata: Metadata = buildMetadata({
   title: "Polityka prywatności",
@@ -246,10 +247,6 @@ export default function PolitykaPrywatnosciPage() {
           Nie sprzedajemy ani nie udostępniamy Twoich danych podmiotom trzecim w
           celach marketingowych.
         </p>
-        <TodoNote>
-          uzupełnić dokładną nazwę podmiotu Hostinger z faktury/regulaminu
-          (obecnie: {HOSTING_PROVIDER}).
-        </TodoNote>
       </LegalSection>
 
       <LegalSection heading="6. Dane osób trzecich (obowiązek informacyjny z art. 14 RODO)">
