@@ -99,7 +99,8 @@ export function SiteFooter() {
           </p>
           <p>
             NIP: {COMPANY_LEGAL.nip} &middot; REGON: {COMPANY_LEGAL.regon}{" "}
-            &middot; KRS: {COMPANY_LEGAL.krs}
+            &middot; KRS: {COMPANY_LEGAL.krs} &middot; Kapitał zakładowy:{" "}
+            {COMPANY_LEGAL.shareCapital}
           </p>
           <p>{COMPANY_LEGAL.court}.</p>
         </div>
