@@ -102,11 +102,19 @@ nginx -t && systemctl reload nginx
 
 ## Uwaga o środowisku (dev-flow)
 
-W `C:\Users\barto\.claude\launch.json` konfiguracja „dev" uruchamia **inny projekt** (Najem Okazjonalny). Serwer deweloperski RajReal uruchamiaj z katalogu projektu:
+**Lokalizacja projektu na dysku:**
+```
+C:\Bartek\Biznesy\AI projekty\RajReal Skup
+```
+
+Serwer deweloperski uruchamiaj z katalogu projektu — ścieżka zawiera spacje, więc **cudzysłowy są obowiązkowe**:
 ```powershell
-cd C:\Users\barto\projects\terra-polnoc
+cd "C:\Bartek\Biznesy\AI projekty\RajReal Skup"
 npm run dev
 ```
-Nie blokuje niczego — dotyczy wyłącznie lokalnej wygody.
 
-> **Nazwa katalogu** to wciąż `terra-polnoc` (historyczna, robocza nazwa projektu). Sam kod, repo i marka są w pełni przemianowane na RajReal — zmiana nazwy katalogu jest kosmetyczna i nieobowiązkowa.
+> ⚠️ W `C:\Users\barto\.claude\launch.json` konfiguracja „dev" uruchamia **inny projekt** (Najem Okazjonalny) — nie używaj jej do RajReal, tylko powyższego `cd` + `npm run dev`.
+
+> ⚠️ **Spacje w ścieżce** (`AI projekty`, `RajReal Skup`) — w terminalu zawsze obejmuj ją cudzysłowami, inaczej komendy się wysypią.
+
+> 💡 Gdy Windows nie pozwala przenieść/usunąć folderu („otwarty w innym programie") — zwykle trzyma go działający serwer dev (procesy `node.exe`), VS Code z otwartym folderem albo terminal z `cd` w projekcie.
